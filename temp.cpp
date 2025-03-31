@@ -71,7 +71,7 @@ void NO(bool t=true) {cout<<(t?"NO":"YES");}
 
 // she told "manush caile sob pare" .In any case, I must reach my goal, in sha Allah.
 
-void solve() {
+void slove() {
 
     
 
@@ -95,7 +95,7 @@ int main() {
     int t = 1;
     cin >> t;
     while(t--) {
-        solve();
+        slove();
     }
     
     return 0;
