@@ -1,78 +1,103 @@
-//strating In the name of Allah, the Most Gracious, the Most Merciful.
+// In the name of Allah, the Most Gracious, the Most Merciful.
+// Coded by: Ridwan Ahmed
+//Codeforces Handle: ridwan2005
+// Contest: 
+// Problem: 
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
 #define l long
-#define I int
+#define ull unsigned long long
+#define ld long double
 #define nx '\n'
+#define vi vector<int>
+#define vll vector<ll>
+#define pii pair<int,int>
+#define pll pair<ll,ll>
+#define vpii vector<pii>
+#define vpll vector<pll>
 #define pb push_back
-#define MP make_pair
+#define mp make_pair
 #define ff first
 #define ss second
-#define sz(x) x.size()
 #define point(n,d)  fixed << setprecision(d) <<n //n=float vale,d= precision
 #define yes cout << "YES" << nx;
 #define no cout << "NO" << nx;
-#define yn(x) cout << (x ? "YES" : "NO") << nx;
-#define ny(x) cout << (x ? "NO" : "YES") << nx;
-#define all(x) begin(x), end(x)
-#define allr(x) rbegin(x), rend(x)
-#define GCD(a,b)  __gcd(a,b)
-#define LCM(a,b)  (a*b)/__gcd(a,b)
-#define sqr(a)    ((a)*(a))
-const int A = 1e5;
-#define fastIO cin.tie(0)->sync_with_stdio(0);
+#define sz(x) ((int)(x).size())
+#define all(x) (x).begin(), (x).end()
+#define allr(x) (x).rbegin(), (x).rend()
+#define mem(a, b) memset(a, b, sizeof(a))
+#define set_bits __builtin_popcountll
+#define fastio ios_base::sync_with_stdio(false); cin.tie(NULL)
+#ifndef ONLINE_JUDGE
+#define debug(x) cerr << #x <<" = "; _print(x); cerr << endl;
+#else
+#define debug(x)
+#endif
 #define fo(i,n) for(i=0;i<n;i++)
 #define Fo(i,k,n) for(i=k;k<n?i<n:i>n;k<n?i+=1:i-=1)
-ll binToDec(string s) { return bitset<64>(s).to_ullong(); } //binary to decimal
-string decToBin(ll a) { return bitset<64>(a).to_string(); } // decimal to binary
+const int A = 1e5;
 
-bool isVowel(char ch)
-{
-    static const std::set<char> vowels = {'a', 'e', 'i', 'o', 'u', 'Y', 'y', 'A', 'E', 'I', 'O', 'U'};
-    return vowels.find(ch) != vowels.end();
+// Constants
+const int MOD = 1e9+7;
+const int INF = 1e9;
+const ll LINF = 1e18;
+const ld PI = acos(-1.0);
+const ld EPS = 1e-9;
+
+// Utility functions
+template<typename T> void printVec(const vector<T>& v) {for(auto i:v)cout<<i<<" ";cout<<"\n";}
+template<typename T> void printMat(const vector<vector<T>>& mat) {for(auto row:mat)printVec(row);}
+string to_binary(ll n) {string s;while(n){s=(n%2?"1":"0")+s;n/=2;}return s;}
+ll to_decimal(string s) {return bitset<64>(s).to_ullong();}
+
+// Mathematical functions
+ll gcd(ll a, ll b) {return b?gcd(b,a%b):a;}
+ll lcm(ll a, ll b) {return a/gcd(a,b)*b;}
+ll modpow(ll a, ll b, ll m=MOD) {ll res=1;a%=m;while(b){if(b&1)res=(res*a)%m;a=(a*a)%m;b>>=1;}return res;}
+ll modinv(ll a, ll m=MOD) {return modpow(a,m-2,m);}
+bool isPrime(ll n) {if(n<=1)return false;if(n<=3)return true;if(n%2==0||n%3==0)return false;for(ll i=5;i*i<=n;i+=6)if(n%i==0||n%(i+2)==0)return false;return true;}
+bool isPerfectSquare(ll x) {ll s=sqrt(x);return s*s==x;}
+
+// String operations
+bool isVowel(char c) {c=tolower(c);return c=='a'||c=='e'||c=='i'||c=='o'||c=='u'||c=='y';}
+string to_upper(string s) {transform(all(s),s.begin(),::toupper);return s;}
+string to_lower(string s) {transform(all(s),s.begin(),::tolower);return s;}
+bool isPalindrome(string s) {ll n=sz(s);for(ll i=0;i<n/2;i++)if(s[i]!=s[n-i-1])return false;return true;}
+
+// Debugging and testing
+void YES(bool t=true) {cout<<(t?"YES":"NO");}
+void NO(bool t=true) {cout<<(t?"NO":"YES");}
+
+// she told "manush caile sob pare" .In any case, I must reach my goal, in sha Allah.
+
+void solve() {
+
+    
+
+
+
+
+
+
+
 }
 
-bool isPrime(int n)
-{
-    if (n <= 1)return false;if (n <= 3)return true;
-    if (n % 2 == 0 || n % 3 == 0)return false;
-    for (int i = 5; i * i <= n; i += 6)if (n % i == 0 || n % (i + 2) == 0)return false;
-    return true;
-}
-
-                                    ///////////////////////////////
-                                    //       ridwan2005          //
-                                    //          Bubt             //
-                                    /////////////////////////////
-
-
-             // she told "manush caile sob pare" .In any case, I must reach my goal, in sha Allah.
-
-void slove(){
-
-
-
-
-
-
-
-
-
-}
-int main()
-{
-    fastIO;
-
-#ifndef ONLINE_JUDGE
+int main() {
+    fastio;
+    
+    #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
-#endif
-    int t;
+    freopen("error.txt", "w", stderr);
+    #endif
+    
+    int t = 1;
     cin >> t;
-    while (t--)
-    {
-        slove();
+    while(t--) {
+        solve();
     }
+    
+    return 0;
 }
-// Alhamdulillah this code is Done;
+// Alhamdulillah
