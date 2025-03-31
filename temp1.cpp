@@ -84,7 +84,7 @@ bool isPrime(ll n) {if(n<=1)return false;if(n<=3)return true;if(n%2==0||n%3==0)r
 bool isPerfectSquare(ll x) {ll s=sqrt(x);return s*s==x;}
 
 // String operations
-bool isVowel(char c) {c=tolower(c);return c=='a'||c=='e'||c=='i'||c=='o'||c=='u';}
+bool isVowel(char c) {c=tolower(c);return c=='a'||c=='e'||c=='i'||c=='o'||c=='u'||c=='y';}
 string to_upper(string s) {transform(all(s),s.begin(),::toupper);return s;}
 string to_lower(string s) {transform(all(s),s.begin(),::tolower);return s;}
 bool isPalindrome(string s) {ll n=sz(s);for(ll i=0;i<n/2;i++)if(s[i]!=s[n-i-1])return false;return true;}
